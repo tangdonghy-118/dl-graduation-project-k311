@@ -54,7 +54,7 @@ def processing_cluster_logic(model, df):
     
     # mapping
     sorted_clusters = df_temp.groupby('cluster')['price_m2'].mean().sort_values().index.tolist()
-    labels = ["Phổ thông",  "Cao cấp"]
+    labels = ["Diện tích to",  "Diện tích nhỏ"]
     mapping = {cluster_id: labels[i] if i < len(labels) else f"Nhóm {cluster_id}" 
             for i, cluster_id in enumerate(sorted_clusters)}
     
